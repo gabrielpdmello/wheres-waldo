@@ -139,6 +139,9 @@ function StartGame() {
   useEffect(() => {
     async function loadLevel() {
       try {
+        if (Number.isNaN(Number(levelId))){
+          navigate("/404");
+        }
         const res = await fetch(`${apiUrl}/levels/${levelId}`);
         if (!res.ok) {
           if (res.status === 404) {
