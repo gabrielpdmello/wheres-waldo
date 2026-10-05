@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model level {
+  id Int @id @default(autoincrement())
+  title String
+  description String
+  imgUrl String
+  marker_size Int // value in %, in proportion of the level image. This value should be different depending on the level
+  characters level_character[]
+  leaderboard leaderboard[]
+}
+
+model character {
+  id Int @id
+  name String
+  imgUrl String
+  level_character level_character[]
+}
+
+// contains the position of the character and their image in a level
+model level_character {
+  id Int @id @default(autoincrement())
+  level_id Int
+  imgUrl String
+  character_id Int
+  pos Float[] // x and y, from 0 to 1
+  level level @relation(fields: [level_id], references: [id])
+  character character @relation(fields: [character_id], references: [id])
+}
+
+model game {
+  id String @id @default(uuid())
+  level_id Int
+  found_characters Int[]
+  started_at DateTime @default(now())
+  win_at DateTime?
+  time Int?
+}
+
+model leaderboard {
+  id Int @id @default(autoincrement())
+  name String
+  level_id Int
+  time Int
+  level level @relation(fields: [level_id], references: [id])
+}

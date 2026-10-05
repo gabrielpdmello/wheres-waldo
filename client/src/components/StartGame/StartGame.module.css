@@ -1,0 +1,86 @@
+/* GamePreview */
+.game-preview {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  position: relative;
+  min-height: 15rem;
+  flex: 0 1 40%;
+}
+
+.description {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.characters {
+  text-align: center;
+}
+
+.characters-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.level-img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.button-wrapper {
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+.ready {
+  text-align: center;
+}
+
+/* LeaderBoard */
+
+.leaderboard {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 20rem;
+  position: relative;
+  flex: 0 1 30%;
+}
+
+.leaderboard h2 {
+  text-align: center;
+}
+
+.leaderboard table {
+  width: 100%;
+}
+
+.leaderboard th {
+  text-align: start;
+}
+
+/* StartGame */
+.container {
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: flex-start;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.loading-wrapper {
+  max-width: 5rem;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}

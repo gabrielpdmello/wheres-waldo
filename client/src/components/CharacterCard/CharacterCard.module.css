@@ -1,0 +1,30 @@
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-card h3 {
+  max-width: min-content;
+  text-align: center;
+}
+
+.character-card img {
+  border: 2px solid var(--primary);
+  object-fit: cover;
+}
+
+.round {
+  border-radius: 100px;
+}
+
+/* image sizes */
+.default {
+  width: 7rem;
+  height: 7rem;
+}
+
+.small {
+  width: 5rem;
+  height: 5rem;
+}

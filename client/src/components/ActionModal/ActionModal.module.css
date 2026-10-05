@@ -1,0 +1,17 @@
+.modal-content {
+  display: flex;
+  gap: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: fit-content;
+  padding: 0 1rem;
+  background-color: white;
+  border: 1px solid var(--primary);
+}
+
+.close {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}

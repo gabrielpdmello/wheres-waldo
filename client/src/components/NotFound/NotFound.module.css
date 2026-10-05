@@ -1,0 +1,15 @@
+.container {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 4rem;
+}
+
+.container p {
+  font-size: 1.6rem;
+  text-align: center;
+
+}

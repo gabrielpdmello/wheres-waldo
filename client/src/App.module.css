@@ -1,0 +1,34 @@
+/* Gamecard */
+.gamecard {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1rem 1rem;
+  width: 50rem;
+  margin: 0 auto 2rem auto;
+}
+
+.gamecard img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* App */
+.title {
+  text-align: center;
+}
+
+.game-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.loading-wrapper {
+  max-width: 5rem;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
