@@ -57,13 +57,19 @@ function App() {
 
   if (error) {
     return (
-      <div className={styles.container}>
+      <div className={styles["error-msg"]}>
         <p>A network error was encountered</p>
       </div>
     );
   }
 
-  console.log(levels[0])
+  if (levels.length === 0) {
+    return (
+      <div className={styles["error-msg"]}>
+        <p>No levels found!</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -71,11 +77,7 @@ function App() {
       <ol className={styles["game-list"]}>
         {levels.map((level) => (
           <li key={level.id}>
-            <Gamecard
-              id={level.id}
-              title={level.title}
-              img={level.imgUrl}
-            />
+            <Gamecard id={level.id} title={level.title} img={level.imgUrl} />
           </li>
         ))}
       </ol>
